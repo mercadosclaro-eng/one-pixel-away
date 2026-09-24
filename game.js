@@ -139,13 +139,13 @@
 
   function shareText() {
     const blocks = results.map(r => r.distance <= 2 ? '🟨' : r.distance <= 8 ? '🟩' : r.distance <= 20 ? '🟦' : '⬛').join('');
-    return `One Pixel Away · ${dayKey()}\n${score.toLocaleString('en-US')}/10,000\n${blocks}\n${location.href.split('?')[0]}`;
+    return `Pixel Brake Zero · ${dayKey()}\n${score.toLocaleString('en-US')}/10,000\n${blocks}\n${location.href.split('?')[0]}`;
   }
 
   async function shareResult() {
     const text = shareText();
     try {
-      if (navigator.share) { await navigator.share({ title: 'One Pixel Away', text }); els.share.textContent = t().shared; }
+      if (navigator.share) { await navigator.share({ title: 'Pixel Brake Zero', text }); els.share.textContent = t().shared; }
       else { await navigator.clipboard.writeText(text); els.share.textContent = t().copied; }
     } catch (_) { return; }
     setTimeout(() => { els.share.textContent = t().share; }, 1600);

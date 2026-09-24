@@ -1,4 +1,4 @@
-# One Pixel Away
+# Pixel Brake Zero
 
 A mobile-first daily precision game. Ten taps, one shared daily challenge, no account and no download.
 
